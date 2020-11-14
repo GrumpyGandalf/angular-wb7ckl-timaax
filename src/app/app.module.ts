@@ -9,8 +9,7 @@ import { ProductListComponent } from "./product-list/product-list.component";
 import { ProductsAlertComponent } from "./products-alert/products-alert.component";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
 import { CartService } from "./cart.service";
-import { RandomComponent } from "./random/random.component";
-import { CartComponent } from "./cart/cart.component";
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -19,7 +18,7 @@ import { CartComponent } from "./cart/cart.component";
     RouterModule.forRoot([
       { path: "", component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailsComponent },
-      { path: "products/:productId", component: RandomComponent }
+      { path: 'cart', component: CartComponent },
     ])
   ],
   declarations: [
@@ -28,7 +27,7 @@ import { CartComponent } from "./cart/cart.component";
     ProductListComponent,
     ProductsAlertComponent,
     ProductDetailsComponent,
-    RandomComponent
+    CartComponent
   ],
   bootstrap: [AppComponent],
   providers: [CartService]
